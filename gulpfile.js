@@ -88,7 +88,7 @@ gulp.task('prebuild', async function() {
   var buildCss = gulp
     .src([
       // Переносим библиотеки в продакшен
-      'app/css/style.css',
+      'app/css/style.css', 'app/css/reset.css'
       // 'app/css/libs.min.css'
     ])
     .pipe(cssnano()) // Сжимаем
