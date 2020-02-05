@@ -1,19 +1,32 @@
 @import 'nullstyle';
+@font-face {
+  font-family: 'MasonChronicles';
+  src: url('../fonts/MasonChronicles.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'masonchronicles';
+  src: url('../fonts/masonchronicles.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 html {
-  background: #ccc;
+  background-color: #ccc;
 }
 body {
   width: 1440px;
   height: 900px;
   color: #fff;
-  background: #141218;
+  background-color: #141218;
   font-family: 'Roboto', sans-serif;
 }
 header {
   height: 97px;
   display: flex;
   align-items: flex-end;
+  margin-bottom: 90px;
 }
 .header {
   width: 1134px;
@@ -68,10 +81,114 @@ header {
     width: 25px;
     height: 25px;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
   }
   &__link:hover {
     background-color: #9d2929;
   }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 975px;
+  height: 554px;
+  margin-left: 153px;
+}
+.content {
+  display: block;
+  width: 458px;
+  height: 356px;
+  // .content__genre
+
+  &__genre {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+
+  // .content__rating
+
+  &__rating {
+    display: flex;
+    width: 191px;
+    height: 14px;
+    margin-bottom: 10px;
+  }
+
+  // .content__rating--stars
+
+  &__rating--stars {
+    & img {
+      width: 12px;
+    }
+  }
+
+  // .content__rating--value
+
+  &__rating--value {
+    margin-left: 9px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  // .content__header
+
+  &__header {
+    font-family: MasonChronicles, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76px;
+    line-height: 89px;
+    margin-bottom: 10px;
+  }
+
+  // .content__description
+
+  &__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+
+  // .content__button
+
+  &__button {
+    width: 260px;
+    height: 60px;
+    background-color: #9D2929;
+    border-radius: 8px;
+    color: #fff;
+  }
+}
+
+.button-play {
+  background-color: #9D2929;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+  & img {
+    transform: translateX(5px);
+  }
+}
+
+.button-play::before {
+  content: '';
+  width: 132px;
+  height: 132px;
+  top: -16px;
+  left: -16px;
+  border-radius: 50%;
+  background-color: #9D2929;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
 }
