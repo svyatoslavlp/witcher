@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Ведьмак</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <nav class="header">
+      <nav class="header animated fadeIn delay-16s">
         <div class="header__left">
-          <img src="img/logo.png" alt="logo" title="Лого-Ведьмак" class="logo" />
+          <img
+            src="img/logo.png"
+            alt="logo"
+            title="Лого-Ведьмак"
+            class="logo"
+          />
           <ul class="menu">
-            <li class="menu__li"><a class="menu__li--link" href="">Описание</a c></li>
-            <li class="menu__li"><a class="menu__li--link" href="">Трейлер</a class="menu__li--link"></li>
-            <li class="menu__li"><a class="menu__li--link" href="">Отзывы</a></li>
+            <li class="menu__li">
+              <a class="menu__li--link" href="">Описание</a>
+            </li>
+            <li class="menu__li">
+              <a class="menu__li--link" href="">Трейлер</a>
+            </li>
+            <li class="menu__li">
+              <a class="menu__li--link" href="">Отзывы</a>
+            </li>
           </ul>
         </div>
         <div class="social">
@@ -34,30 +51,86 @@
       </nav>
     </header>
     <main class="main">
-      <div class="content">
-        <span class="content__genre">2019, фэнтези</span>
-        <div class="content__rating">
-          <div class="content__rating--stars">
-            <img src="img/star-completed.svg" alt="star">
-            <img src="img/star-completed.svg" alt="star">
-            <img src="img/star-completed.svg" alt="star">
-            <img src="img/star-completed.svg" alt="star">
-            <img src="img/star-completed.svg" alt="star">
-            <img src="img/star-completed.svg" alt="star">
-            <img src="img/star-completed.svg" alt="star">
-            <img src="img/star-empty.svg" alt="star-none">
-            <img src="img/star-empty.svg" alt="star-none">
-            <img src="img/star-empty.svg" alt="star-none">
+      <div class="main__top">
+        <div class="content">
+          <span class="content__genre  animated fadeIn delay-2s">2019, фэнтези</span>
+          <div class="content__rating  animated fadeIn delay-4s">
+            <div class="content__rating--stars">
+              <img src="img/star-completed.svg" alt="star" />
+              <img src="img/star-completed.svg" alt="star" />
+              <img src="img/star-completed.svg" alt="star" />
+              <img src="img/star-completed.svg" alt="star" />
+              <img src="img/star-completed.svg" alt="star" />
+              <img src="img/star-completed.svg" alt="star" />
+              <img src="img/star-completed.svg" alt="star" />
+              <img src="img/star-empty.svg" alt="star-none" />
+              <img src="img/star-empty.svg" alt="star-none" />
+              <img src="img/star-empty.svg" alt="star-none" />
+            </div>
+            <span class="content__rating--value">7/10</span>
           </div>
-          <span class="content__rating--value">7/10</span>
+          <h1 class="content__header  animated fadeIn delay-6s">Ведьмак</h1>
+          <p class="content__description animated fadeIn delay-8s">
+            Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по
+            кличке Плотва путешествует по Континенту. За тугой мешочек чеканных
+            монет этот мужчина избавит вас от всякой настырной нечисти — хоть от
+            чудищ болотных, оборотней и даже заколдованных принцесс.
+          </p>
+          <a
+            data-fancybox
+            href="https://www.youtube.com/watch?v=TbIX30A0zYM"
+            class="content__button animated fadeIn delay-10s"
+            >Смотреть трейлер</a
+          >
         </div>
-        <h1 class="content__header">Ведьмак</h1>
-        <p class="content__description">Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по кличке Плотва путешествует по Континенту. За тугой мешочек чеканных монет этот мужчина избавит вас от всякой настырной нечисти — хоть от чудищ болотных, оборотней и даже заколдованных принцесс. </p>
-        <button class="content__button">Смотреть онлайн</button>
+        <a
+          data-fancybox
+          href="https://www.youtube.com/watch?v=TbIX30A0zYM"
+          class="button-play animated pulse infinite delay-12s"
+        >
+          <img src="img/play.svg" alt="play" />
+        </a>
       </div>
-      <button class="button-play">
-        <img src="img/play.svg" alt="play">
-      </button>
+
+      <div class="series animated fadeIn delay-14s">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card series-1">
+                <span class="card__subtitle">Серия #1</span>
+                <span class="card__title">Начало конца</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card series-2">
+                <span class="card__subtitle">Серия #2</span>
+                <span class="card__title">Четыре знака</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card series-1">
+                <span class="card__subtitle">Серия #3</span>
+                <span class="card__title">Начало конца</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="arrow">
+          <img src="img/arrow.svg" alt="arrow" title="Далее" />
+        </button>
+      </div>
     </main>
+    <div class="footer">
+      <p class="footer__left">© 2020 The Witcher. All right reserved.</p>
+      <ul class="footer_richt">
+        <li class="footer_richt--link"><a href="">Privacy Policy</a></li>
+        <li class="footer_richt--link"><a href="">Terms of Service</a></li>
+        <li class="footer_richt--link"><a href="">Legal</a></li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

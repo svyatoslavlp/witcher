@@ -42,6 +42,7 @@ gulp.task('scripts', function() {
     .src([
       // Берем все необходимые библиотеки
       'app/js/swiper.js', // Берем swiper
+      'app/js/jquery.fancybox.js', // Берем fancybox
       // 'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
     ])
     // .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
@@ -88,8 +89,9 @@ gulp.task('prebuild', async function() {
   var buildCss = gulp
     .src([
       // Переносим библиотеки в продакшен
-      'app/css/style.css', 'app/css/reset.css', 'app/css/swiper.css'
+      // 'app/css/style.css', 'app/css/reset.css', 'app/css/swiper.css', 'jquery.fancybox.css', 'animate.css'
       // 'app/css/libs.min.css'
+      'app/css/*.css'
     ])
     .pipe(cssnano()) // Сжимаем
     .pipe(gulp.dest('dist/css'));
@@ -115,7 +117,7 @@ gulp.task('watch', function() {
   gulp.watch('app/scss/**/*.+(scss|sass)', gulp.parallel('sass')); // Наблюдение за sass файлами
   gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
   gulp.watch(
-    ['app/js/common.js', 'app/js/swiper.js'],
+    ['app/js/common.js'], // , 'app/js/swiper.js'
     gulp.parallel('scripts')
   ); // Наблюдение за главным JS файлом и за библиотеками
 });
