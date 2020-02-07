@@ -207,6 +207,10 @@ header {
   position: absolute;
   z-index: -1;
 }
+.swiper-container {
+  width: 420px;
+  height: 113px;
+}
 .series {
   display: flex;
   align-items: center;
@@ -249,8 +253,10 @@ header {
   }
 }
 
-// .arrow {
-// }
+.arrow {
+  background-color: transparent;
+  border: none;
+}
 .footer {
   display: flex;
   width: 100%;
@@ -258,6 +264,7 @@ header {
   justify-content: space-around;
   align-items: center;
   margin-top: auto;
+  background-color: #141218;
   // .footer_richt
 
   &_richt {

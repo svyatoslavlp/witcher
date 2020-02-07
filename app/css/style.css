@@ -237,6 +237,10 @@ header {
   position: absolute;
   z-index: -1; }
 
+.swiper-container {
+  width: 420px;
+  height: 113px; }
+
 .series {
   display: -webkit-box;
   display: -webkit-flex;
@@ -295,6 +299,10 @@ header {
     margin-bottom: 13px;
     margin-left: 13px; }
 
+.arrow {
+  background-color: transparent;
+  border: none; }
+
 .footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -309,7 +317,8 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: auto; }
+  margin-top: auto;
+  background-color: #141218; }
   .footer_richt {
     display: -webkit-box;
     display: -webkit-flex;
