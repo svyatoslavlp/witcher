@@ -10,13 +10,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
+      <div class="background animated fadeIn"></div>
       <header>
         <nav class="header animated fadeInDownBig">
           <div class="header__left">
@@ -72,10 +73,11 @@
             </div>
             <h1 class="content__header  animated fadeIn">Ведьмак</h1>
             <p class="content__description animated fadeIn">
-              Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по
-              кличке Плотва путешествует по Континенту. За тугой мешочек чеканных
-              монет этот мужчина избавит вас от всякой настырной нечисти — хоть от
-              чудищ болотных, оборотней и даже заколдованных принцесс.
+              Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади
+              по кличке Плотва путешествует по Континенту. За тугой мешочек
+              чеканных монет этот мужчина избавит вас от всякой настырной
+              нечисти — хоть от чудищ болотных, оборотней и даже заколдованных
+              принцесс.
             </p>
             <a
               data-fancybox
@@ -84,15 +86,16 @@
               >Смотреть трейлер</a
             >
           </div>
-          <a
-            data-fancybox
-            href="https://www.youtube.com/watch?v=TbIX30A0zYM"
-            class="button-play animated fadeInRight"
-          >
-            <img src="img/play.svg" alt="play" />
-          </a>
+          <div class="button-play-wrapper animated fadeIn">
+            <a
+              data-fancybox
+              href="https://www.youtube.com/watch?v=TbIX30A0zYM"
+              class="button-play animated heartBeat"
+            >
+              <img src="img/play.svg" alt="play" />
+            </a>
+          </div>
         </div>
-  
         <div class="series animated fadeInUp">
           <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -129,7 +132,6 @@
           <li class="footer_richt--link"><a href="">Legal</a></li>
         </ul>
       </div>
-      <div class="background animated fadeIn"></div>
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
       <script src="js/jquery.fancybox.js"></script>
       <script src="js/swiper.js"></script>

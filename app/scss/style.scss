@@ -25,8 +25,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: -2;
   margin: 0 auto;
+}
+
+.background {
+  position: absolute;
+  width: 1440px;
+  height: 100vh;
+  min-height: 900px;
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-position: 400px 0;
+  animation-duration: 20s;
 }
 header {
   height: 97px;
@@ -74,27 +84,37 @@ header {
       color: #ffffff;
       padding: 0 5px;
       text-decoration: none;
+      transition-property: background-color, padding;
+      transition-duration: 0.5s, 1s;
     }
     &--link:hover {
       background-color: #9d2929;
+      padding: 10px 5px;
+      border-radius: 5px;
     }
   }
 }
 .social {
-  width: 93px;
-  height: 25px;
+  width: 120px;
+  height: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   // .social__link
   &__link {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: background-color, padding;
+    transition-duration: 0.5s, 1s;
   }
   &__link:hover {
     background-color: #9d2929;
+    padding: 10px 5px;
+    border-radius: 5px;
   }
 }
 
@@ -107,7 +127,7 @@ header {
   &__top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     width: 975px;
     margin-bottom: 85px;
   }
@@ -200,7 +220,10 @@ header {
     color: #fff;
   }
 }
-
+.button-play-wrapper {
+  animation-duration: 3s;
+  animation-delay: 10s;
+}
 .button-play {
   display: flex;
   justify-content: center;
@@ -212,8 +235,9 @@ header {
   border: none;
   position: relative;
   z-index: 5;
-  animation-duration: 10s;
-  animation-delay: 10s;
+  animation-duration: 8s;
+  animation-delay: 16s;
+  animation-iteration-count: infinite;
   & img {
     transform: translateX(5px);
   }
@@ -244,13 +268,15 @@ header {
   animation-delay: 10s;
 }
 .series-1 {
-  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),  url('../img/series/series_1.jpg');
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url('../img/series/series_1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .series-2 {
-  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),  url('../img/series/series_2.jpg');
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url('../img/series/series_2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -291,10 +317,13 @@ header {
   align-items: center;
   margin-top: auto;
   background-color: #141218;
+  z-index: 1;
   // .footer_richt
 
   &_richt {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   // .footer_richt--link
@@ -306,10 +335,15 @@ header {
       font-size: 14px;
       line-height: 20px;
       color: #727174;
+      padding: 0 5px;
+      transition-property: background-color, padding;
+      transition-duration: 1s, 1s;
     }
-  }
-  &_richt--link:hover {
-    background-color: #9d2929;
+    a:hover {
+      background-color: #9d2929;
+      padding: 5px 5px;
+      border-radius: 5px;
+    }
   }
 
   // .footer__left
@@ -319,15 +353,4 @@ header {
     line-height: 20px;
     color: #727174;
   }
-}
-.background {
-  position: absolute;
-  width: 1440px;
-  height: 100vh;
-  min-height: 900px;
-  background-image: url('../img/background.jpg');
-  background-repeat: no-repeat;
-  background-position: 400px 0;
-  z-index: -1;
-  animation-duration: 20s;
 }
