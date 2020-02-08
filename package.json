@@ -29,5 +29,9 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^8.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "lodash.template": "^4.5.0"
   }
 }

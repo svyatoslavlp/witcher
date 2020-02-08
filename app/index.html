@@ -16,121 +16,124 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <nav class="header animated fadeIn delay-16s">
-        <div class="header__left">
-          <img
-            src="img/logo.png"
-            alt="logo"
-            title="Лого-Ведьмак"
-            class="logo"
-          />
-          <ul class="menu">
-            <li class="menu__li">
-              <a class="menu__li--link" href="">Описание</a>
-            </li>
-            <li class="menu__li">
-              <a class="menu__li--link" href="">Трейлер</a>
-            </li>
-            <li class="menu__li">
-              <a class="menu__li--link" href="">Отзывы</a>
-            </li>
-          </ul>
-        </div>
-        <div class="social">
-          <a href="" class="social__link"
-            ><img src="img/twitter.svg" alt="twitter"
-          /></a>
-          <a href="" class="social__link"
-            ><img src="img/instagram.svg" alt="instagram"
-          /></a>
-          <a href="" class="social__link"
-            ><img src="img/facebook.svg" alt="facebook"
-          /></a>
-        </div>
-      </nav>
-    </header>
-    <main class="main">
-      <div class="main__top">
-        <div class="content">
-          <span class="content__genre  animated fadeIn delay-2s">2019, фэнтези</span>
-          <div class="content__rating  animated fadeIn delay-4s">
-            <div class="content__rating--stars">
-              <img src="img/star-completed.svg" alt="star" />
-              <img src="img/star-completed.svg" alt="star" />
-              <img src="img/star-completed.svg" alt="star" />
-              <img src="img/star-completed.svg" alt="star" />
-              <img src="img/star-completed.svg" alt="star" />
-              <img src="img/star-completed.svg" alt="star" />
-              <img src="img/star-completed.svg" alt="star" />
-              <img src="img/star-empty.svg" alt="star-none" />
-              <img src="img/star-empty.svg" alt="star-none" />
-              <img src="img/star-empty.svg" alt="star-none" />
-            </div>
-            <span class="content__rating--value">7/10</span>
+    <div class="container">
+      <header>
+        <nav class="header animated fadeInDownBig">
+          <div class="header__left">
+            <img
+              src="img/logo.png"
+              alt="logo"
+              title="Лого-Ведьмак"
+              class="logo"
+            />
+            <ul class="menu">
+              <li class="menu__li">
+                <a class="menu__li--link" href="">Описание</a>
+              </li>
+              <li class="menu__li">
+                <a class="menu__li--link" href="">Трейлер</a>
+              </li>
+              <li class="menu__li">
+                <a class="menu__li--link" href="">Отзывы</a>
+              </li>
+            </ul>
           </div>
-          <h1 class="content__header  animated fadeIn delay-6s">Ведьмак</h1>
-          <p class="content__description animated fadeIn delay-8s">
-            Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по
-            кличке Плотва путешествует по Континенту. За тугой мешочек чеканных
-            монет этот мужчина избавит вас от всякой настырной нечисти — хоть от
-            чудищ болотных, оборотней и даже заколдованных принцесс.
-          </p>
+          <div class="social">
+            <a href="" class="social__link"
+              ><img src="img/twitter.svg" alt="twitter"
+            /></a>
+            <a href="" class="social__link"
+              ><img src="img/instagram.svg" alt="instagram"
+            /></a>
+            <a href="" class="social__link"
+              ><img src="img/facebook.svg" alt="facebook"
+            /></a>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="main__top">
+          <div class="content">
+            <span class="content__genre  animated fadeIn">2019, фэнтези</span>
+            <div class="content__rating  animated fadeIn">
+              <div class="content__rating--stars">
+                <img src="img/star-completed.svg" alt="star" />
+                <img src="img/star-completed.svg" alt="star" />
+                <img src="img/star-completed.svg" alt="star" />
+                <img src="img/star-completed.svg" alt="star" />
+                <img src="img/star-completed.svg" alt="star" />
+                <img src="img/star-completed.svg" alt="star" />
+                <img src="img/star-completed.svg" alt="star" />
+                <img src="img/star-empty.svg" alt="star-none" />
+                <img src="img/star-empty.svg" alt="star-none" />
+                <img src="img/star-empty.svg" alt="star-none" />
+              </div>
+              <span class="content__rating--value">7/10</span>
+            </div>
+            <h1 class="content__header  animated fadeIn">Ведьмак</h1>
+            <p class="content__description animated fadeIn">
+              Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по
+              кличке Плотва путешествует по Континенту. За тугой мешочек чеканных
+              монет этот мужчина избавит вас от всякой настырной нечисти — хоть от
+              чудищ болотных, оборотней и даже заколдованных принцесс.
+            </p>
+            <a
+              data-fancybox
+              href="https://www.youtube.com/watch?v=TbIX30A0zYM"
+              class="content__button animated fadeIn"
+              >Смотреть трейлер</a
+            >
+          </div>
           <a
             data-fancybox
             href="https://www.youtube.com/watch?v=TbIX30A0zYM"
-            class="content__button animated fadeIn delay-10s"
-            >Смотреть трейлер</a
+            class="button-play animated fadeInRight"
           >
+            <img src="img/play.svg" alt="play" />
+          </a>
         </div>
-        <a
-          data-fancybox
-          href="https://www.youtube.com/watch?v=TbIX30A0zYM"
-          class="button-play animated pulse infinite delay-12s"
-        >
-          <img src="img/play.svg" alt="play" />
-        </a>
-      </div>
-
-      <div class="series animated fadeIn delay-14s">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card series-1">
-                <span class="card__subtitle">Серия #1</span>
-                <span class="card__title">Начало конца</span>
+  
+        <div class="series animated fadeInUp">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card series-1">
+                  <span class="card__subtitle">Серия #1</span>
+                  <span class="card__title">Начало конца</span>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card series-2">
-                <span class="card__subtitle">Серия #2</span>
-                <span class="card__title">Четыре знака</span>
+              <div class="swiper-slide">
+                <div class="card series-2">
+                  <span class="card__subtitle">Серия #2</span>
+                  <span class="card__title">Четыре знака</span>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card series-1">
-                <span class="card__subtitle">Серия #3</span>
-                <span class="card__title">Начало конца</span>
+              <div class="swiper-slide">
+                <div class="card series-1">
+                  <span class="card__subtitle">Серия #3</span>
+                  <span class="card__title">Начало конца</span>
+                </div>
               </div>
             </div>
           </div>
+          <button class="arrow">
+            <img src="img/arrow.svg" alt="arrow" title="Далее" />
+          </button>
         </div>
-        <button class="arrow">
-          <img src="img/arrow.svg" alt="arrow" title="Далее" />
-        </button>
+      </main>
+      <div class="footer">
+        <p class="footer__left">© 2020 The Witcher. All right reserved.</p>
+        <ul class="footer_richt">
+          <li class="footer_richt--link"><a href="">Privacy Policy</a></li>
+          <li class="footer_richt--link"><a href="">Terms of Service</a></li>
+          <li class="footer_richt--link"><a href="">Legal</a></li>
+        </ul>
       </div>
-    </main>
-    <div class="footer">
-      <p class="footer__left">© 2020 The Witcher. All right reserved.</p>
-      <ul class="footer_richt">
-        <li class="footer_richt--link"><a href="">Privacy Policy</a></li>
-        <li class="footer_richt--link"><a href="">Terms of Service</a></li>
-        <li class="footer_richt--link"><a href="">Legal</a></li>
-      </ul>
+      <div class="background animated fadeIn"></div>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+      <script src="js/jquery.fancybox.js"></script>
+      <script src="js/swiper.js"></script>
+      <script src="js/common.js"></script>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/common.js"></script>
   </body>
 </html>

@@ -10,10 +10,11 @@
   font-weight: normal;
   font-style: normal; }
 
-html {
-  background-color: #ccc; }
-
 body {
+  background-color: #141218; }
+
+.container {
+  position: relative;
   width: 1440px;
   height: 100vh;
   min-height: 900px;
@@ -33,9 +34,8 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-position: 400px 0; }
+  z-index: -2;
+  margin: 0 auto; }
 
 header {
   height: 97px;
@@ -66,7 +66,9 @@ header {
           align-items: center;
   margin: 0 auto;
   -webkit-animation-duration: 10s;
-          animation-duration: 10s; }
+          animation-duration: 10s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
   .header__left {
     width: 340px;
     height: 37px;
@@ -178,8 +180,10 @@ header {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 16px;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s; }
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
   .content__rating {
     display: -webkit-box;
     display: -webkit-flex;
@@ -188,8 +192,10 @@ header {
     width: 191px;
     height: 14px;
     margin-bottom: 10px;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s; }
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
   .content__rating--stars img {
     width: 12px; }
   .content__rating--value {
@@ -203,8 +209,10 @@ header {
     font-size: 76px;
     line-height: 89px;
     margin-bottom: 10px;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s; }
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
   .content__description {
     font-family: Roboto;
     font-style: normal;
@@ -212,8 +220,10 @@ header {
     font-size: 14px;
     line-height: 150%;
     margin-bottom: 40px;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s; }
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
   .content__button {
     display: -webkit-box;
     display: -webkit-flex;
@@ -234,8 +244,10 @@ header {
     border: none;
     color: #fff;
     text-decoration: none;
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s; }
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s; }
   .content__button:active {
     color: #fff; }
 
@@ -260,7 +272,9 @@ header {
   position: relative;
   z-index: 5;
   -webkit-animation-duration: 10s;
-          animation-duration: 10s; }
+          animation-duration: 10s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s; }
   .button-play img {
     -webkit-transform: translateX(5px);
         -ms-transform: translateX(5px);
@@ -294,7 +308,9 @@ header {
   width: 420px;
   height: 113px;
   -webkit-animation-duration: 10s;
-          animation-duration: 10s; }
+          animation-duration: 10s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s; }
 
 .series-1 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 18, 24, 0.5)), to(#2d2d2d)), url("../img/series/series_1.jpg");
@@ -380,3 +396,15 @@ header {
     font-size: 14px;
     line-height: 20px;
     color: #727174; }
+
+.background {
+  position: absolute;
+  width: 1440px;
+  height: 100vh;
+  min-height: 900px;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: 400px 0;
+  z-index: -1;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s; }
