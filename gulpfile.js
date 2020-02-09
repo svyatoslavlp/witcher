@@ -41,27 +41,28 @@ gulp.task('scripts', function() {
   return gulp
     .src([
       // Берем все необходимые библиотеки
-      'app/js/swiper.js', // Берем swiper
-      'app/js/jquery.fancybox.js', // Берем fancybox
+      'app/js/libs/*.js'
+      // 'app/js/swiper.min.js', // Берем swiper
+      // 'app/js/jquery.fancybox.min.js', // Берем fancybox
       // 'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
     ])
-    // .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+    .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
     .pipe(uglify()) // Сжимаем JS файл
-    .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
+    .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js/libs
 });
 
 gulp.task('code', function() {
   return gulp.src('app/*.html').pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('css-libs', function() {
-  return gulp
-    .src('app/scss/**/*.+(scss|sass)') // Выбираем файл для минификации
-    .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-    .pipe(cssnano()) // Сжимаем
-    .pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
-    .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
-});
+// gulp.task('css-libs', function() {
+//   return gulp
+//     .src('app/scss/**/*.+(scss|sass)') // Выбираем файл для минификации
+//     .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+//     .pipe(cssnano()) // Сжимаем
+//     .pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
+//     .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
+// });
 
 gulp.task('clean', async function() {
   return del.sync('dist'); // Удаляем папку dist перед сборкой
@@ -101,7 +102,11 @@ gulp.task('prebuild', async function() {
     .pipe(gulp.dest('dist/fonts'));
 
   var buildJs = gulp
-    .src('app/js/**/*') // Переносим скрипты в продакшен
+    .src([// Переносим скрипты в продакшен
+      // 'app/js/**/*'
+      'app/js/common.js',
+      'app/js/libs.min.js'
+    ]) 
     .pipe(gulp.dest('dist/js'));
 
   var buildHtml = gulp
@@ -124,7 +129,7 @@ gulp.task('watch', function() {
 
 gulp.task(
   'default',
-  gulp.parallel('css-libs', 'sass', 'browser-sync', 'watch') // 'scripts',
+  gulp.parallel( 'sass', 'browser-sync', 'watch') // 'scripts','css-libs',
 );
 gulp.task(
   'build',
