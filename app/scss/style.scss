@@ -243,20 +243,20 @@ header {
   & img {
     transform: translateX(5px);
   }
+  &::before {
+    content: '';
+    width: 132px;
+    height: 132px;
+    top: -16px;
+    left: -16px;
+    border-radius: 50%;
+    background-color: #9d2929;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
-.button-play::before {
-  content: '';
-  width: 132px;
-  height: 132px;
-  top: -16px;
-  left: -16px;
-  border-radius: 50%;
-  background-color: #9d2929;
-  opacity: 0.5;
-  position: absolute;
-  z-index: -1;
-}
 .swiper-container {
   width: 420px;
   height: 113px;
@@ -322,7 +322,7 @@ header {
   z-index: 1;
   // .footer_richt
 
-  &_richt {
+  &__richt {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -330,7 +330,7 @@ header {
 
   // .footer_richt--link
 
-  &_richt--link {
+  &__richt--link {
     margin-right: 25px;
     a {
       text-decoration: none;
@@ -354,5 +354,85 @@ header {
     font-size: 14px;
     line-height: 20px;
     color: #727174;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .background {
+    background-position: 10% 0;
+  }
+  .button-play {
+    width: 80px;
+    height: 80px;
+    & img {
+      width: 25px;
+    }
+    &::before {
+      width: 104px;
+      height: 104px;
+      top: -12px;
+      left: -12px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .background {
+    background-position: 60% 0;
+  }
+  header {
+    margin-bottom: 180px;
+    align-items: center;
+  }
+  .header {
+    width: 90%;
+  }
+  .content {
+    width: 100%;
+  }
+  .button-play-wrapper {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+    height: 110px;
+    &__left {
+      flex-basis: 30%;
+    }
+    &__richt {
+      flex-basis: 30%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    background-position: 67% 0;
+  }
+  header {
+    padding-top: 20px;
+    margin-bottom: 280px;
+  }
+  .main {
+    height: auto;
+  }
+  .content {
+    height: auto;
+    &__header{
+      text-align: center;
+    }
+    &__button {
+      margin: 0 auto;
+    }
+  }
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+    height: 110px;
+    &__left {
+      flex-basis: 30%;
+    }
+    &__richt {
+      flex-basis: 30%;
+    }
   }
 }
