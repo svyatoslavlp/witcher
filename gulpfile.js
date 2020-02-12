@@ -44,7 +44,7 @@ gulp.task('scripts', function() {
       'app/js/libs/*.js'
       // 'app/js/swiper.min.js', // Берем swiper
       // 'app/js/jquery.fancybox.min.js', // Берем fancybox
-      // 'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+      // 'app/libs/magnific-popup/docs/jquery.magnific-popup.min.js' // Берем Magnific Popup
     ])
     .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
     .pipe(uglify()) // Сжимаем JS файл
@@ -65,7 +65,7 @@ gulp.task('code', function() {
 // });
 
 gulp.task('clean', async function() {
-  return del.sync('dist'); // Удаляем папку dist перед сборкой
+  return del.sync('docs'); // Удаляем папку docs перед сборкой
 });
 
 gulp.task('img', function() {
@@ -83,7 +83,7 @@ gulp.task('img', function() {
         })
       ) /**/
     )
-    .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
+    .pipe(gulp.dest('docs/img')); // Выгружаем на продакшен
 });
 
 gulp.task('prebuild', async function() {
@@ -95,23 +95,24 @@ gulp.task('prebuild', async function() {
       'app/css/*.css'
     ])
     .pipe(cssnano()) // Сжимаем
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('docs/css'));
 
   var buildFonts = gulp
     .src('app/fonts/**/*') // Переносим шрифты в продакшен
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('docs/fonts'));
 
   var buildJs = gulp
-    .src([// Переносим скрипты в продакшен
+    .src([
+      // Переносим скрипты в продакшен
       // 'app/js/**/*'
       'app/js/common.js',
       'app/js/libs.min.js'
-    ]) 
-    .pipe(gulp.dest('dist/js'));
+    ])
+    .pipe(gulp.dest('docs/js'));
 
   var buildHtml = gulp
     .src('app/*.html') // Переносим HTML в продакшен
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('clear', function(callback) {
@@ -129,7 +130,7 @@ gulp.task('watch', function() {
 
 gulp.task(
   'default',
-  gulp.parallel( 'sass', 'browser-sync', 'watch') // 'scripts','css-libs',
+  gulp.parallel('sass', 'browser-sync', 'watch') // 'scripts','css-libs',
 );
 gulp.task(
   'build',
